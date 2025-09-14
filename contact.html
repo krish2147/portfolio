@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Me</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Contact Section */
+.contact {
+  padding: 80px 10%;
+  background-color: #f5f5dc; /* beige */
+  min-height: 80vh;
+  text-align: center;
+}
+
+.contact h1 {
+  font-size: 42px;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.contact p {
+  font-size: 18px;
+  margin-bottom: 40px;
+  color: #444;
+}
+
+/* Buttons */
+.contact-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.contact-buttons .btn {
+  display: inline-block;
+  padding: 15px 30px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 500;
+  transition: 0.3s;
+  color: white;
+}
+
+/* Individual styles */
+.btn.call {
+  background: #2563eb; /* blue */
+}
+.btn.call:hover {
+  background: #1d4ed8;
+}
+
+.btn.whatsapp {
+  background: #25d366; /* WhatsApp green */
+}
+.btn.whatsapp:hover {
+  background: #1da851;
+}
+
+.btn.email {
+  background: #d97706; /* warm orange */
+}
+.btn.email:hover {
+  background: #b45309;
+}
+           /* About Section */
+.about {
+  padding: 80px 10%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 80vh;
+  background-color: #f5f5dc; /* beige */
+}
+
+.about .container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 50px;
+}
+
+.about-text {
+  flex: 1;
+}
+
+.about-text h1 {
+  font-size: 42px;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.about-text p {
+  font-size: 18px;
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+/* About Image */
+.about-img {
+  flex: 1;
+  text-align: center;
+}
+
+.about-img img {
+  max-width: 320px;
+  width: 100%;
+  border-radius: 15px;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+}
+  body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background-color: #f5f5dc; /* beige background */
+      color: #333;
+    }
+
+    /* Navigation Bar */
+    nav {
+      background: white;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      padding: 15px 50px;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    nav .logo {
+      font-size: 22px;
+      font-weight: 700;
+      color: #444;
+      letter-spacing: 1px;
+    }
+
+    nav ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      gap: 30px;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: #333;
+      font-weight: 500;
+      transition: 0.3s;
+    }
+
+    nav ul li a:hover {
+      color: #d97706; /* warm orange hover */
+    }
+    nav ul li a {
+  position: relative;
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  transition: color 0.3s;
+  padding: 5px 10px;
+}
+
+/* Hover text color */
+nav ul li a:hover {
+  color: #d97706;
+}
+
+/* Underline effect */
+nav ul li a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -3px;
+  width: 0%;
+  height: 3px;
+  background: #d97706;
+  transition: width 0.3s ease-in-out;
+  border-radius: 2px;
+}
+
+/* On hover, expand underline */
+nav ul li a:hover::after {
+  width: 100%;
+}
+
+/* Active page link */
+nav ul li a.active {
+  color: #d97706;
+}
+
+/* Keep underline visible for active page */
+nav ul li a.active::after {
+  width: 100%;
+}
+</style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav>
+    <div class="logo">Krish</div>
+    <ul>
+      <li><a href="home.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="portfolio.html">Portfolio</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- Contact Section -->
+  <section class="contact">
+    <div class="container">
+      <h1>Contact Me</h1>
+      <p>Click below to reach me instantly 👇</p>
+
+      <div class="contact-buttons">
+        <a href="tel:+918401829027" class="btn call">📞 Call Me</a>
+        <a href="https://wa.me/918401829027" target="_blank" class="btn whatsapp">💬 WhatsApp</a>
+        <a href="mailto:krishprajapati2147@gmail.com" class="btn email">📧 Email Me</a>
+      </div>
+    </div>
+  </section>
+ <footer class="bg-yellow-200 text-gray-700 text-center py-6">
+    &copy; 2025 krish. All rights reserved.
+  </footer>
+   <script>
+    const currentPage = window.location.pathname.split("/").pop();
+  const navLinks = document.querySelectorAll("nav ul li a");
+
+  navLinks.forEach(link => {
+    if (link.getAttribute("href") === currentPage) {
+      link.classList.add("active");
+    }
+  });
+  </script> 
+</body>
+</html>

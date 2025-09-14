@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Me</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+ <style>
+    /* About Section */
+.about {
+  padding: 80px 10%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 80vh;
+  background-color: #f5f5dc; /* beige */
+}
+
+.about .container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 50px;
+}
+
+.about-text {
+  flex: 1;
+}
+
+.about-text h1 {
+  font-size: 42px;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.about-text p {
+  font-size: 18px;
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+/* About Image */
+.about-img {
+  flex: 1;
+  text-align: center;
+}
+
+.about-img img {
+  max-width: 320px;
+  width: 100%;
+  border-radius: 15px;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+}
+  body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background-color: #f5f5dc; /* beige background */
+      color: #333;
+    }
+
+    /* Navigation Bar */
+    nav {
+      background: white;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      padding: 15px 50px;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    nav .logo {
+      font-size: 22px;
+      font-weight: 700;
+      color: #444;
+      letter-spacing: 1px;
+    }
+
+    nav ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      gap: 30px;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: #333;
+      font-weight: 500;
+      transition: 0.3s;
+    }
+
+    nav ul li a:hover {
+      color: #d97706; /* warm orange hover */
+    }
+    nav ul li a {
+  position: relative;
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  transition: color 0.3s;
+  padding: 5px 10px;
+}
+
+/* Hover text color */
+nav ul li a:hover {
+  color: #d97706;
+}
+
+/* Underline effect */
+nav ul li a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -3px;
+  width: 0%;
+  height: 3px;
+  background: #d97706;
+  transition: width 0.3s ease-in-out;
+  border-radius: 2px;
+}
+
+/* On hover, expand underline */
+nav ul li a:hover::after {
+  width: 100%;
+}
+
+/* Active page link */
+nav ul li a.active {
+  color: #d97706;
+}
+
+/* Keep underline visible for active page */
+nav ul li a.active::after {
+  width: 100%;
+}
+
+</style>
+</head>
+<body>
+
+  <!-- Navbar (same everywhere) -->
+  <nav>
+    <div class="logo">Krish</div>
+    <ul>
+      <li><a href="home.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="portfolio.html">Portfolio</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- About Section -->
+  <section class="about">
+    <div class="container">
+      <div class="about-text">
+        <h1>About Me</h1>
+        <p>
+          Hi, I’m <b>Krish</b> 👋 — a passionate Computer Science student and aspiring developer.  
+           who loves building modern, responsive, and professional web applications. I specialize in HTML, CSS, JavaScript, and Python.
+          My journey started with learning Python and web development, and I’m now building projects to sharpen my skills.  
+        </p>
+        <p>
+          Outside of coding, I enjoy exploring new technologies, fitness, and collaborating with creative minds.  
+          My goal is to land a high-paying, in-demand job in the tech industry 🚀
+        </p>
+      </div>
+      <div class="about-img">
+        <img src="5.jpeg" alt="Krish">
+      </div>
+    </div>
+  </section>
+  <script>
+    const currentPage = window.location.pathname.split("/").pop();
+  const navLinks = document.querySelectorAll("nav ul li a");
+
+  navLinks.forEach(link => {
+    if (link.getAttribute("href") === currentPage) {
+      link.classList.add("active");
+    }
+  });
+  </script> 
+     <footer class="bg-yellow-200 text-gray-700 text-center py-6">
+    &copy; 2025 krish. All rights reserved.
+  </footer>
+</body>
+</html>
