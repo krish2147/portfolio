@@ -224,9 +224,6 @@ nav ul li a.active::after {
       </div>
     </div>
   </section>
- <footer class="bg-yellow-200 text-gray-700 text-center py-6">
-    &copy; 2025 krish. All rights reserved.
-  </footer>
    <script>
     const currentPage = window.location.pathname.split("/").pop();
   const navLinks = document.querySelectorAll("nav ul li a");
@@ -237,7 +234,7 @@ nav ul li a.active::after {
     }
   });
   </script> 
-  <div class="share-section">
+ <div class="share-section">
   <h3>🔗 Share this Portfolio</h3>
 
   <!-- Copy Link Button -->
@@ -245,11 +242,21 @@ nav ul li a.active::after {
 
   <!-- Social Media Share -->
   <div class="share-buttons">
-    <a href="https://wa.me/?text=Check%20out%20this%20portfolio:%20https://krish2147.github.io/portfolio/" target="_blank" class="whatsapp" title="Share on WhatsApp">WhatsApp</a>
-    <a href="https://www.linkedin.com/sharing/share-offsite/?url=https://krish2147.github.io/portfolio/" target="_blank" class="linkedin" title="Share on LinkedIn">LinkedIn</a>
-    <a href="https://twitter.com/intent/tweet?url=https://krish2147.github.io/portfolio/&text=Check%20this%20out!" target="_blank" class="twitter" title="Share on Twitter">🐦 Twiiter</a>
-    <a href="mailto:?subject=Check%20out%20this%20portfolio&body=Here%20is%20the%20link:%20https://krish2147.github.io/portfolio/" target="_blank" class="email" title="Share via Email">✉️ Email</a>
-    <a href="https://www.facebook.com/sharer/sharer.php?u=https://krish2147.github.io/portfolio/" target="_blank" class="facebook" title="Share on Facebook">Facebook</a>
+    <a href="https://wa.me/?text=Check%20out%20this%20portfolio:%20https://krish2147.github.io/portfolio/" target="_blank" class="whatsapp">
+      <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/whatsapp.svg" alt="WhatsApp" class="icon"> WhatsApp
+    </a>
+    <a href="https://www.linkedin.com/sharing/share-offsite/?url=https://krish2147.github.io/portfolio/" target="_blank" class="linkedin">
+      <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/linkedin.svg" alt="LinkedIn" class="icon"> LinkedIn
+    </a>
+    <a href="https://twitter.com/intent/tweet?url=https://krish2147.github.io/portfolio/&text=Check%20this%20out!" target="_blank" class="twitter">
+      <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/twitter.svg" alt="Twitter" class="icon"> Twitter
+    </a>
+    <a href="mailto:?subject=Check%20out%20this%20portfolio&body=Here%20is%20the%20link:%20https://krish2147.github.io/portfolio/" target="_blank" class="email">
+      <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/gmail.svg" alt="Email" class="icon"> Email
+    </a>
+    <a href="https://www.facebook.com/sharer/sharer.php?u=https://krish2147.github.io/portfolio/" target="_blank" class="facebook">
+      <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/facebook.svg" alt="Facebook" class="icon"> Facebook
+    </a>
   </div>
 </div>
 
@@ -263,29 +270,29 @@ document.getElementById("copyLinkBtn").addEventListener("click", () => {
 
 <style>
 .share-section {
-  margin: 20px 0;
-  padding: 20px;
+  margin: 30px 0;
+  padding: 25px;
   background: #fdf5e6;
   border-radius: 15px;
   text-align: center;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
 }
 
 .share-section h3 {
-  margin-bottom: 15px;
-  font-size: 18px;
+  margin-bottom: 20px;
+  font-size: 20px;
   color: #333;
 }
 
 #copyLinkBtn {
   background: #f5deb3;
   border: none;
-  padding: 10px 20px;
-  border-radius: 12px;
+  padding: 12px 25px;
+  border-radius: 15px;
   cursor: pointer;
   font-size: 16px;
   font-weight: bold;
-  margin-bottom: 15px;
+  margin-bottom: 25px;
   transition: 0.3s;
 }
 #copyLinkBtn:hover {
@@ -294,33 +301,44 @@ document.getElementById("copyLinkBtn").addEventListener("click", () => {
 
 .share-buttons {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
-  gap: 15px;
+  gap: 12px;
 }
 
 .share-buttons a {
   display: flex;
   align-items: center;
-  justify-content: center;
-  width: 45px;
-  height: 45px;
-  border-radius: 50%;
-  color: white;
-  font-size: 20px;
+  gap: 10px;
+  padding: 10px 20px;
+  background-color: #f5deb3;
+  color: black;
   text-decoration: none;
-  transition: transform 0.3s;
+  border-radius: 15px;
+  font-weight: bold;
+  transition: transform 0.3s, background 0.3s;
 }
 
 .share-buttons a:hover {
-  transform: scale(1.2);
+  transform: scale(1.05);
+  background-color: #e0cba8;
 }
 
-/* Colors for each social */
-.whatsapp { background: #25D366; }
-.linkedin { background: #0077B5; }
-.twitter { background: #1DA1F2; }
-.email { background: #D44638; }
-.facebook { background: #1877F2; }
+.share-buttons .icon {
+  width: 20px;
+  height: 20px;
+  filter: invert(100%); /* makes the SVG white to match text */
+}
+
+/* Social colors */
+.whatsapp { background: #25D366; color: white; }
+.linkedin { background: #0077B5; color: white; }
+.twitter { background: #1DA1F2; color: white; }
+.email { background: #D44638; color: white; }
+.facebook { background: #1877F2; color: white; }
 </style>
+  <footer class="bg-yellow-200 text-gray-700 text-center py-6">
+    &copy; 2025 krish. All rights reserved.
+  </footer>
 </body>
 </html>
